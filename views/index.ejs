@@ -1,0 +1,40 @@
+<%- include('./partials/header.ejs') %> 
+  <body>
+    <div class="list-group">
+        <% actress.forEach(idol => { %>
+            <div class="list-group-item list-group-item-action">
+                
+                  
+                    <div>
+                        <img src="<%= idol.imageUrl %>" width="100px" height="150px" alt="<%= idol.name%>"/>
+                        <h3><%= idol.name%></h3>
+                        <h4>
+                            waist: <%= idol.waist %> <br>
+                            bust: <%= idol.bust  %> <br>
+                            hip: <%= idol.hip %> <br>
+                            height: <%= idol.height %> 
+    
+                        </h4>
+                    </div>
+                    <div>
+                     
+                      <p>
+                        <%= idol.name%> or (<%= idol.japanName%>) has born on <%= idol.birthday %>.
+                        <a href="/api/<%= idol.id %>">click-here</a>
+                      
+                      </p>
+    
+                    </div>
+    
+                  </div>
+            </div>
+           
+          <% }) %>
+          
+    
+    
+     
+
+      </div>
+     
+<%- include('./partials/footer.ejs') %> 

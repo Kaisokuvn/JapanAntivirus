@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+  <h1>Nhớ giữ gìn sức khỏe nhé ae!</h1>
+  <div class="list-group">
+    <% result.forEach(element => { %>
+    <div class="list-group-item list-group-item-action">
+      <a href="<%= element.siteUrl %> "
+        ><img src="<%= element.imageUrl.slice(7) %>" alt="image" />
+        <h3><%= element.name %></h3></a
+      >
+    </div>
+
+    <% }) %>
+  </div>
+</div>
+<%- include('./partials/footer.ejs') %>
